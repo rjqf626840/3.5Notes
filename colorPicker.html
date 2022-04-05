@@ -15,9 +15,16 @@
     .blue {
         background-color:blue;
     }
-    .gold {
-        background-color:gold;
+    .skyblue {
+        background-color:skyblue;
     }
+    .darkred {
+        background-color:darkred;
+    }
+    .darkseagreen {
+        background-color:darkseagreen;
+    }
+
     .pink {
         color:pink;
     }
@@ -26,6 +33,15 @@
     }
     .purple {
         color:purple;
+    }
+    .slategray {
+        color:slategray;
+    }
+    .gold {
+        color:gold;
+    }
+    .midnightblue {
+        color:midnightblue;
     }
 </style>
 <body>
@@ -41,13 +57,19 @@
            <button id="1">RED</button>
             <button id="2">GREEN</button>
             <button id="3">BLUE</button>
+            <button id="4">SKYBLUE</button>
+            <button id="5">DARKRED</button>
+            <button id="6">DARKSEAGREEN</button>
             </div>
         <div class="row">
             <h3> Text </h3>
-            <button id="4">PINK</button>
-            <button id="5">TEAL</button>
-            <button id="6">PURPLE</button>
-            </div>
+            <button id="7">PINK</button>
+            <button id="8">TEAL</button>
+            <button id="9">PURPLE</button>
+            <button id="10">SLATEGRAY</button>
+            <button id="11">GOLD</button>
+            <button id="12">MIDNIGHTBLUE</button>
+        </div>
         <button id="clear">CLEAR</button>
         </div>
     </div>
@@ -56,10 +78,17 @@
     const red = document.getElementById('1');
     const green = document.getElementById('2');
     const blue = document.getElementById('3');
+    const skyblue = document.getElementById('4');
+    const darkred = document.getElementById('5');
+    const darkseagreen = document.getElementById('6');
 
-    const pink = document.getElementById('4');
-    const teal = document.getElementById('5');
-    const purple = document.getElementById('6');
+
+    const pink = document.getElementById('7');
+    const teal = document.getElementById('8');
+    const purple = document.getElementById('9');
+    const slategray = document.getElementById('10');
+    const gold = document.getElementById('11');
+    const midnightblue = document.getElementById('12');
 
     const clear = document.getElementById('clear');
 
@@ -78,6 +107,21 @@
         content.classList.add('blue');
     });
 
+    skyblue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('skyblue');
+    });
+
+    darkred.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('darkred');
+    });
+
+    darkseagreen.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('darkseagreen');
+    });
+
     pink.addEventListener('click', function(e){
         removeTextColor();
         content.classList.add('pink');
@@ -93,6 +137,21 @@
         content.classList.add('purple');
     });
 
+    slategray.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('slategray');
+    });
+
+    gold.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('gold');
+    });
+
+    midnightblue.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('midnightblue');
+    });
+
     clear.addEventListener('click', function(e){
     removeBGColor();
     removeTextColor();
@@ -102,12 +161,19 @@
         content.classList.remove('red')
         content.classList.remove('green')
         content.classList.remove('blue')
+        content.classList.remove('skyblue')
+        content.classList.remove('darkred')
+        content.classList.remove('darkseagreen')
     }
 
     function removeTextColor(){
         content.classList.remove('pink')
         content.classList.remove('teal')
         content.classList.remove('purple')
+        content.classList.remove('slategray')
+        content.classList.remove('gold')
+        content.classList.remove('midnightblue')
+
     }
 </script>
 </body>
