@@ -20,7 +20,7 @@
                 </select>
                 </div>
             <div>
-                <label for="email"> Your Email:</label>
+                <label for="email"> Your Letter:</label>
                 <textarea id="email" name="email" rows="10" cols="30" placeholder="Your future self awaits!"></textarea>
             </div>
         </div>
@@ -38,9 +38,9 @@
     const email = document.getElementById('email');
 
     sendButton.addEventListener('click', function(e){
-      const container = document.createElement('container')
-      container.innerHTML = `Your email will be sent in ${container.value} years.`
-      all.appendChild(container);
+      const container1 = document.createElement('container')
+      container1.innerHTML = `Your email will be sent in ${container.value} years.`
+      all.appendChild(container1);
     })
     clearButton.addEventListener('click', function(e){
         all.innerHTML = " ";
