@@ -38,3 +38,6 @@ function buildBoard(){
         addCard('starter');
     }
 }
+
+
+
